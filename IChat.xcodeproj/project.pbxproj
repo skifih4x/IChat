@@ -10,6 +10,7 @@
 		0013191728AD77570014E8EE /* StackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0013191628AD77570014E8EE /* StackView + Extension.swift */; };
 		0013191928AD7AB50014E8EE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0013191828AD7AB50014E8EE /* SignUpViewController.swift */; };
 		0013191B28AD7D4C0014E8EE /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0013191A28AD7D4C0014E8EE /* OneLineTextField.swift */; };
+		0013191D28AD90EF0014E8EE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0013191C28AD90EF0014E8EE /* LoginViewController.swift */; };
 		005EC05628A0599E007FCA42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005EC05528A0599E007FCA42 /* AppDelegate.swift */; };
 		005EC05828A0599E007FCA42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005EC05728A0599E007FCA42 /* SceneDelegate.swift */; };
 		005EC05A28A0599E007FCA42 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005EC05928A0599E007FCA42 /* AuthViewController.swift */; };
@@ -27,6 +28,7 @@
 		0013191628AD77570014E8EE /* StackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StackView + Extension.swift"; sourceTree = "<group>"; };
 		0013191828AD7AB50014E8EE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0013191A28AD7D4C0014E8EE /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
+		0013191C28AD90EF0014E8EE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		005EC05228A0599E007FCA42 /* IChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		005EC05528A0599E007FCA42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		005EC05728A0599E007FCA42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			children = (
 				005EC05528A0599E007FCA42 /* AppDelegate.swift */,
 				005EC05728A0599E007FCA42 /* SceneDelegate.swift */,
+				0013191C28AD90EF0014E8EE /* LoginViewController.swift */,
 				005EC05928A0599E007FCA42 /* AuthViewController.swift */,
 				005EC05E28A0599F007FCA42 /* Assets.xcassets */,
 				005EC06028A0599F007FCA42 /* LaunchScreen.storyboard */,
@@ -188,6 +191,7 @@
 				005EC06A28AD4805007FCA42 /* UIButton + Extension.swift in Sources */,
 				005EC07028AD5B1A007FCA42 /* UILabel + Extansion.swift in Sources */,
 				005EC06E28AD5899007FCA42 /* UIColor + Extansion.swift in Sources */,
+				0013191D28AD90EF0014E8EE /* LoginViewController.swift in Sources */,
 				0013191728AD77570014E8EE /* StackView + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

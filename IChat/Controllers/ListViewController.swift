@@ -30,6 +30,15 @@ class ListViewController: UIViewController {
     enum Section: Int, CaseIterable {
         case waitingChats, activeChats
         
+        func description() -> String {
+            switch self {
+            case .waitingChats:
+                return "WaitingChats"
+            case .activeChats:
+                return "ActiveChats"
+            }
+        }
+        
     }
     
     var dataSource: UICollectionViewDiffableDataSource<Section, MChat>?
@@ -60,18 +69,21 @@ class ListViewController: UIViewController {
         collectionView.backgroundColor = .mainWhite()
         view.addSubview(collectionView)
         
+        collectionView.register(SectionHeader.self,
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                withReuseIdentifier: SectionHeader.reuseId)
         
         collectionView.register(ActiveChatCell.self, forCellWithReuseIdentifier: ActiveChatCell.reuseId)
         collectionView.register(WaitingChatCell.self, forCellWithReuseIdentifier: WaitingChatCell.reuseId)
     }
-     
+    
     private func reloadData() {
         var snapshot = NSDiffableDataSourceSnapshot<Section, MChat>()
         snapshot.appendSections([.waitingChats, .activeChats])
-         
+        
         snapshot.appendItems(waitingChats, toSection: .waitingChats)
         snapshot.appendItems(activeChats, toSection: .activeChats)
-
+        
         
         dataSource?.apply(snapshot, animatingDifferences: true)
     }
@@ -80,7 +92,7 @@ class ListViewController: UIViewController {
 //MARK: - Data Sourсe
 
 extension ListViewController {
-     
+    
     private func configure<T: SelfConfiguringCell>(cellType: T.Type, with value: MChat, for indexPath: IndexPath) -> T {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellType.reuseId, for: indexPath) as? T else {
             fatalError("Unable to dequeue \(cellType)")
@@ -101,11 +113,22 @@ extension ListViewController {
                 return self.configure(cellType: ActiveChatCell.self, with: chat, for: indexPath)
             case .waitingChats:
                 return self.configure(cellType: WaitingChatCell.self, with: chat, for: indexPath)
-
+                
             }
         })
+        
+        dataSource?.supplementaryViewProvider = {
+            collectionView, kind, indexPath in
+            guard let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionHeader.reuseId, for: indexPath ) as? SectionHeader else {
+                fatalError("Can not crate new section header")
+            }
+            guard let section = Section(rawValue: indexPath.section) else { fatalError("Unknown section kind")}
+            sectionHeader.configure(text: section.description(),
+                                    font: .laoSangamMN20(),
+                                    textColor: .black)
+            return sectionHeader
+        }
     }
-
 }
 
 //MARK: - Setup layout
@@ -116,14 +139,18 @@ extension ListViewController {
             guard let section = Section(rawValue: sectionIndex) else {
                 fatalError("Unknow section kind")
             }
-
+            
             switch section {
             case .activeChats:
-               return self.createActiveChats()
+                return self.createActiveChats()
             case .waitingChats:
-               return self.createWaitingChats()
+                return self.createWaitingChats()
             }
         }
+        
+        let config = UICollectionViewCompositionalLayoutConfiguration()
+        config.interSectionSpacing = 20
+        layout.configuration = config
         return layout
     }
     
@@ -141,6 +168,9 @@ extension ListViewController {
         section.interGroupSpacing = 20
         section.contentInsets = NSDirectionalEdgeInsets.init(top: 16, leading: 20, bottom: 0, trailing: 20)
         section.orthogonalScrollingBehavior = .continuous
+        
+        let sectionHeader = createSectionHeader()
+        section.boundarySupplementaryItems = [sectionHeader]
         return section
     }
     
@@ -158,7 +188,20 @@ extension ListViewController {
         section.interGroupSpacing = 8
         section.contentInsets = NSDirectionalEdgeInsets.init(top: 16, leading: 20, bottom: 0, trailing: 20)
         
+        let sectionHeader = createSectionHeader()
+        section.boundarySupplementaryItems = [sectionHeader]
         return section
+    }
+    
+    private func createSectionHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
+        let sectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                                       heightDimension: .estimated(1))
+        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: sectionHeaderSize,
+            elementKind: UICollectionView.elementKindSectionHeader,
+            alignment: .top)
+        
+        return sectionHeader
     }
 }
 

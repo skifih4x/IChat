@@ -16,6 +16,7 @@
 		002F83C928B3EE7B00B7E91D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002F83C828B3EE7B00B7E91D /* GradientView.swift */; };
 		002F83CB28B3F9C000B7E91D /* WaitingChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002F83CA28B3F9C000B7E91D /* WaitingChatCell.swift */; };
 		002F83CD28B3FACD00B7E91D /* SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002F83CC28B3FACD00B7E91D /* SelfConfiguringCell.swift */; };
+		002F83D028B4009C00B7E91D /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002F83CF28B4009C00B7E91D /* SectionHeader.swift */; };
 		003360FC28AE87B5006DFA44 /* SegmentedControll + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003360FB28AE87B5006DFA44 /* SegmentedControll + Extension.swift */; };
 		0033610228AEC8E5006DFA44 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0033610128AEC8E5006DFA44 /* MainTabBarController.swift */; };
 		0033610428AECA6B006DFA44 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0033610328AECA6B006DFA44 /* PeopleViewController.swift */; };
@@ -47,6 +48,7 @@
 		002F83C828B3EE7B00B7E91D /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		002F83CA28B3F9C000B7E91D /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
 		002F83CC28B3FACD00B7E91D /* SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfiguringCell.swift; sourceTree = "<group>"; };
+		002F83CF28B4009C00B7E91D /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		003360FB28AE87B5006DFA44 /* SegmentedControll + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SegmentedControll + Extension.swift"; sourceTree = "<group>"; };
 		0033610128AEC8E5006DFA44 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		0033610328AECA6B006DFA44 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			children = (
 				0033610128AEC8E5006DFA44 /* MainTabBarController.swift */,
 				0033610528B270B5006DFA44 /* ListViewController.swift */,
+				002F83CF28B4009C00B7E91D /* SectionHeader.swift */,
 				0033610328AECA6B006DFA44 /* PeopleViewController.swift */,
 				0033610D28B3DA90006DFA44 /* Cell */,
 			);
@@ -255,6 +258,7 @@
 			files = (
 				0013191B28AD7D4C0014E8EE /* OneLineTextField.swift in Sources */,
 				0033610228AEC8E5006DFA44 /* MainTabBarController.swift in Sources */,
+				002F83D028B4009C00B7E91D /* SectionHeader.swift in Sources */,
 				002F83C928B3EE7B00B7E91D /* GradientView.swift in Sources */,
 				0013191928AD7AB50014E8EE /* SignUpViewController.swift in Sources */,
 				005EC07228AD5BBC007FCA42 /* UIImageView + Extansion.swift in Sources */,

@@ -7,15 +7,44 @@
 
 import UIKit
 
+struct MChat: Hashable {
+    var userName: String
+    var userImage: UIImage
+    var lastMassage: String
+    var id = UUID()
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    static func == (lhs: MChat, rhs: MChat) -> Bool {
+        lhs.id == rhs.id
+    }
+}
+
 class ListViewController: UIViewController {
+    
+    let activeChats: [MChat] = [
+        MChat(userName: "Alexsey", userImage: UIImage(named: "human1")!, lastMassage: "How are you?"),
+        MChat(userName: "Bob", userImage: UIImage(named: "human2")!, lastMassage: "How are you?"),
+        MChat(userName: "Misha", userImage: UIImage(named: "human3")!, lastMassage: "How are you?"),
+        MChat(userName: "Mila", userImage: UIImage(named: "human4")!, lastMassage: "How are you?")
+    ]
     
     var collectionView: UICollectionView!
     
+    enum Section: Int, CaseIterable {
+        case activeChats
+    }
+    
+    var dataSource: UICollectionViewDiffableDataSource<Section, MChat>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
         setupSearchBar()
+        createDataSource()
+        reloadData()
     }
     
     private func setupSearchBar() {
@@ -36,6 +65,30 @@ class ListViewController: UIViewController {
         view.addSubview(collectionView)
         
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellid")
+    }
+    
+    private func createDataSource() {
+        dataSource = UICollectionViewDiffableDataSource<Section, MChat>(collectionView: collectionView, cellProvider: { collectionView, indexPath, chat in
+            
+            guard let section = Section(rawValue: indexPath.section) else {
+                fatalError("Unknow section kind")
+            }
+            
+            switch section {
+            case .activeChats:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellid", for: indexPath)
+                cell.backgroundColor = .systemBlue
+                return cell
+            }
+        })
+    }
+    
+    private func reloadData() {
+        var snapshot = NSDiffableDataSourceSnapshot<Section, MChat>()
+        snapshot.appendSections([.activeChats])
+        snapshot.appendItems(activeChats, toSection: .activeChats)
+        
+        dataSource?.apply(snapshot, animatingDifferences: true)
     }
     
     private func createCompositionLayout() -> UICollectionViewLayout {

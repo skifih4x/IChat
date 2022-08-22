@@ -62,7 +62,7 @@ class ListViewController: UIViewController {
         
         
         collectionView.register(ActiveChatCell.self, forCellWithReuseIdentifier: ActiveChatCell.reuseId)
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellid2")
+        collectionView.register(WaitingChatCell.self, forCellWithReuseIdentifier: WaitingChatCell.reuseId)
     }
      
     private func reloadData() {
@@ -80,7 +80,7 @@ class ListViewController: UIViewController {
 //MARK: - Data Sourсe
 
 extension ListViewController {
-    
+     
     private func configure<T: SelfConfiguringCell>(cellType: T.Type, with value: MChat, for indexPath: IndexPath) -> T {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellType.reuseId, for: indexPath) as? T else {
             fatalError("Unable to dequeue \(cellType)")
@@ -100,9 +100,8 @@ extension ListViewController {
             case .activeChats:
                 return self.configure(cellType: ActiveChatCell.self, with: chat, for: indexPath)
             case .waitingChats:
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellid2", for: indexPath)
-                cell.backgroundColor = .systemRed
-                return cell
+                return self.configure(cellType: WaitingChatCell.self, with: chat, for: indexPath)
+
             }
         })
     }

@@ -17,6 +17,15 @@
 		002F83CB28B3F9C000B7E91D /* WaitingChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002F83CA28B3F9C000B7E91D /* WaitingChatCell.swift */; };
 		002F83CD28B3FACD00B7E91D /* SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002F83CC28B3FACD00B7E91D /* SelfConfiguringCell.swift */; };
 		002F83D028B4009C00B7E91D /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002F83CF28B4009C00B7E91D /* SectionHeader.swift */; };
+		002F83D228B4F3E500B7E91D /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 002F83D128B4F3E500B7E91D /* users.json */; };
+		002F83D528B4F49800B7E91D /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002F83D428B4F49800B7E91D /* MUser.swift */; };
+		002F83D728B4F4AA00B7E91D /* MChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002F83D628B4F4AA00B7E91D /* MChat.swift */; };
+		002F83DA28B50E6100B7E91D /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002F83D928B50E6100B7E91D /* UserCell.swift */; };
+		002F83DC28B50FFF00B7E91D /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002F83DB28B50FFF00B7E91D /* UIViewController + Extension.swift */; };
+		002F83E028B5356700B7E91D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002F83DF28B5356700B7E91D /* ProfileViewController.swift */; };
+		002F83E228B537FB00B7E91D /* InsertableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002F83E128B537FB00B7E91D /* InsertableTextField.swift */; };
+		002F83E428B53A2300B7E91D /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002F83E328B53A2300B7E91D /* UIView + Extension.swift */; };
+		002F83E628B54C5E00B7E91D /* ChatRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002F83E528B54C5E00B7E91D /* ChatRequestViewController.swift */; };
 		003360FC28AE87B5006DFA44 /* SegmentedControll + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003360FB28AE87B5006DFA44 /* SegmentedControll + Extension.swift */; };
 		0033610228AEC8E5006DFA44 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0033610128AEC8E5006DFA44 /* MainTabBarController.swift */; };
 		0033610428AECA6B006DFA44 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0033610328AECA6B006DFA44 /* PeopleViewController.swift */; };
@@ -49,6 +58,15 @@
 		002F83CA28B3F9C000B7E91D /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
 		002F83CC28B3FACD00B7E91D /* SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfiguringCell.swift; sourceTree = "<group>"; };
 		002F83CF28B4009C00B7E91D /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		002F83D128B4F3E500B7E91D /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
+		002F83D428B4F49800B7E91D /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
+		002F83D628B4F4AA00B7E91D /* MChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MChat.swift; sourceTree = "<group>"; };
+		002F83D928B50E6100B7E91D /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		002F83DB28B50FFF00B7E91D /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		002F83DF28B5356700B7E91D /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		002F83E128B537FB00B7E91D /* InsertableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertableTextField.swift; sourceTree = "<group>"; };
+		002F83E328B53A2300B7E91D /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
+		002F83E528B54C5E00B7E91D /* ChatRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestViewController.swift; sourceTree = "<group>"; };
 		003360FB28AE87B5006DFA44 /* SegmentedControll + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SegmentedControll + Extension.swift"; sourceTree = "<group>"; };
 		0033610128AEC8E5006DFA44 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		0033610328AECA6B006DFA44 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +109,23 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		002F83D328B4F3FF00B7E91D /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				002F83CF28B4009C00B7E91D /* SectionHeader.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		002F83D828B4F4FC00B7E91D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				002F83D428B4F49800B7E91D /* MUser.swift */,
+				002F83D628B4F4AA00B7E91D /* MChat.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		003360FF28AEC8A4006DFA44 /* SignIn&Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,9 +142,11 @@
 			children = (
 				0033610128AEC8E5006DFA44 /* MainTabBarController.swift */,
 				0033610528B270B5006DFA44 /* ListViewController.swift */,
-				002F83CF28B4009C00B7E91D /* SectionHeader.swift */,
 				0033610328AECA6B006DFA44 /* PeopleViewController.swift */,
+				002F83DF28B5356700B7E91D /* ProfileViewController.swift */,
+				002F83D328B4F3FF00B7E91D /* Header */,
 				0033610D28B3DA90006DFA44 /* Cell */,
+				002F83E528B54C5E00B7E91D /* ChatRequestViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -119,6 +156,7 @@
 			children = (
 				0033610E28B3DAAA006DFA44 /* ActiveChatCell.swift */,
 				002F83CA28B3F9C000B7E91D /* WaitingChatCell.swift */,
+				002F83D928B50E6100B7E91D /* UserCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -142,6 +180,7 @@
 		005EC05428A0599E007FCA42 /* IChat */ = {
 			isa = PBXGroup;
 			children = (
+				002F83D828B4F4FC00B7E91D /* Models */,
 				0033610028AEC8C0006DFA44 /* Controllers */,
 				003360FF28AEC8A4006DFA44 /* SignIn&Auth */,
 				002F83CE28B3FAF100B7E91D /* Protocols */,
@@ -167,6 +206,9 @@
 				0013191628AD77570014E8EE /* StackView + Extension.swift */,
 				0033610728B3C6FA006DFA44 /* activeChats.json */,
 				0033610928B3C6FF006DFA44 /* waitingChats.json */,
+				002F83D128B4F3E500B7E91D /* users.json */,
+				002F83DB28B50FFF00B7E91D /* UIViewController + Extension.swift */,
+				002F83E328B53A2300B7E91D /* UIView + Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -180,6 +222,7 @@
 				0033610B28B3C725006DFA44 /* Bundle-Decodable.swift */,
 				005EC07328AD695D007FCA42 /* UIKit */,
 				002F83C828B3EE7B00B7E91D /* GradientView.swift */,
+				002F83E128B537FB00B7E91D /* InsertableTextField.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -242,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				002F83D228B4F3E500B7E91D /* users.json in Resources */,
 				005EC06228A0599F007FCA42 /* LaunchScreen.storyboard in Resources */,
 				0033610828B3C6FA006DFA44 /* activeChats.json in Resources */,
 				005EC05F28A0599F007FCA42 /* Assets.xcassets in Resources */,
@@ -256,24 +300,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				002F83D728B4F4AA00B7E91D /* MChat.swift in Sources */,
 				0013191B28AD7D4C0014E8EE /* OneLineTextField.swift in Sources */,
 				0033610228AEC8E5006DFA44 /* MainTabBarController.swift in Sources */,
 				002F83D028B4009C00B7E91D /* SectionHeader.swift in Sources */,
 				002F83C928B3EE7B00B7E91D /* GradientView.swift in Sources */,
 				0013191928AD7AB50014E8EE /* SignUpViewController.swift in Sources */,
 				005EC07228AD5BBC007FCA42 /* UIImageView + Extansion.swift in Sources */,
+				002F83D528B4F49800B7E91D /* MUser.swift in Sources */,
 				0033610F28B3DAAA006DFA44 /* ActiveChatCell.swift in Sources */,
 				0033610428AECA6B006DFA44 /* PeopleViewController.swift in Sources */,
+				002F83E228B537FB00B7E91D /* InsertableTextField.swift in Sources */,
 				005EC05A28A0599E007FCA42 /* AuthViewController.swift in Sources */,
 				0029B79A28AE486700CE0638 /* SetupProfileViewController.swift in Sources */,
+				002F83E028B5356700B7E91D /* ProfileViewController.swift in Sources */,
 				0033610C28B3C725006DFA44 /* Bundle-Decodable.swift in Sources */,
+				002F83E628B54C5E00B7E91D /* ChatRequestViewController.swift in Sources */,
 				005EC05628A0599E007FCA42 /* AppDelegate.swift in Sources */,
 				0033610628B270B5006DFA44 /* ListViewController.swift in Sources */,
 				005EC07628AD6A97007FCA42 /* ButtonFormView.swift in Sources */,
 				003360FC28AE87B5006DFA44 /* SegmentedControll + Extension.swift in Sources */,
 				0029B79C28AE4AF300CE0638 /* AddPhotoView.swift in Sources */,
+				002F83E428B53A2300B7E91D /* UIView + Extension.swift in Sources */,
 				005EC06C28AD57F3007FCA42 /* UIFont + Extansion.swift in Sources */,
 				005EC05828A0599E007FCA42 /* SceneDelegate.swift in Sources */,
+				002F83DA28B50E6100B7E91D /* UserCell.swift in Sources */,
+				002F83DC28B50FFF00B7E91D /* UIViewController + Extension.swift in Sources */,
 				002F83CD28B3FACD00B7E91D /* SelfConfiguringCell.swift in Sources */,
 				002F83CB28B3F9C000B7E91D /* WaitingChatCell.swift in Sources */,
 				005EC06A28AD4805007FCA42 /* UIButton + Extension.swift in Sources */,

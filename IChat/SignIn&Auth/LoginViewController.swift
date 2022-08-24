@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol AuthNavigationDelegate: class {
+    func toLoginVC()
+    func toSignUpVC()
+}
+
 class LoginViewController: UIViewController {
     
     let welcomeLabel = UILabel(text: "Welcome back!", font: .avenir26())
@@ -31,13 +36,15 @@ class LoginViewController: UIViewController {
         backgroundColor: .buttonDark()
     )
     
-    let signButton: UIButton = {
+    let signUpButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Sign Up", for: .normal)
         button.setTitleColor(.buttonRed(), for: .normal)
         button.titleLabel?.font = .avenir20()
         return button
     }()
+    
+    weak var delegate: AuthNavigationDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +53,9 @@ class LoginViewController: UIViewController {
         setupConstraints()
         
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        signUpButton.addTarget(self, action: #selector(singUpButtonTapped), for: .touchUpInside)
+        
+        
     }
     
     @objc private func loginButtonTapped() {
@@ -60,6 +70,13 @@ class LoginViewController: UIViewController {
 
             }
         })
+    }
+    
+    @objc private func singUpButtonTapped() {
+        print(#function)
+        dismiss(animated: true) {
+            self.delegate?.toSignUpVC()
+        }
     }
 }
 
@@ -86,8 +103,8 @@ extension LoginViewController {
                                     axis: .vertical,
                                     spacing: 40)
         
-        signButton.contentHorizontalAlignment = .leading
-        let bottomStackView = UIStackView(arrangedSubviews: [needAnAccountLabel, signButton],
+        signUpButton.contentHorizontalAlignment = .leading
+        let bottomStackView = UIStackView(arrangedSubviews: [needAnAccountLabel, signUpButton],
                                           axis: .horizontal,
                                           spacing: 10)
         bottomStackView.alignment = .firstBaseline

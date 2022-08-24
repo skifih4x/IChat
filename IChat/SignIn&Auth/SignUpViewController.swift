@@ -29,6 +29,8 @@ class SignUpViewController: UIViewController {
         return button
     }()
     
+    weak var delegate: AuthNavigationDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loginButton.setTitle("Login", for: .normal)
@@ -38,6 +40,8 @@ class SignUpViewController: UIViewController {
         setupConstraints()
         
         signUpButton.addTarget(self, action: #selector(singUpButtonTapped), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+
     }
     
     @objc private func singUpButtonTapped() {
@@ -50,6 +54,13 @@ class SignUpViewController: UIViewController {
             case .failure(let error):
                 self.showAlert(with: "ошибка!", and: error.localizedDescription)
             }
+        }
+    }
+    
+    @objc private func loginButtonTapped() {
+        print(#function)
+        self.dismiss(animated: true) {
+            self.delegate?.toLoginVC()
         }
     }
 }

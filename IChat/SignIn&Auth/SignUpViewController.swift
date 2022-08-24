@@ -46,7 +46,7 @@ class SignUpViewController: UIViewController {
             switch result {
             case .success(let user):
                 self.showAlert(with: "успешно!", and: "вы зарегистрированы")
-                print(user.email)
+                print(user.email!)
             case .failure(let error):
                 self.showAlert(with: "ошибка!", and: error.localizedDescription)
             }

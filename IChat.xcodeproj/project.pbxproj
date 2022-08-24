@@ -48,6 +48,7 @@
 		005EC07628AD6A97007FCA42 /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005EC07528AD6A97007FCA42 /* ButtonFormView.swift */; };
 		007DDD4F28B65B2300A02CAC /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007DDD4E28B65B2300A02CAC /* AuthService.swift */; };
 		007DDD5328B6670F00A02CAC /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007DDD5228B6670F00A02CAC /* Validators.swift */; };
+		007DDD5528B6690C00A02CAC /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007DDD5428B6690C00A02CAC /* AuthError.swift */; };
 		2A1609FF519A561482298DE6 /* Pods_IChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63970CAF41B8D72D4A643386 /* Pods_IChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +96,7 @@
 		005EC07528AD6A97007FCA42 /* ButtonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
 		007DDD4E28B65B2300A02CAC /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		007DDD5228B6670F00A02CAC /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
+		007DDD5428B6690C00A02CAC /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		63970CAF41B8D72D4A643386 /* Pods_IChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ACE9783182E124B8EF6C4F8 /* Pods-IChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IChat.debug.xcconfig"; path = "Target Support Files/Pods-IChat/Pods-IChat.debug.xcconfig"; sourceTree = "<group>"; };
 		B6F7906C5839B172A92F0CCB /* Pods-IChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IChat.release.xcconfig"; path = "Target Support Files/Pods-IChat/Pods-IChat.release.xcconfig"; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				003360FF28AEC8A4006DFA44 /* SignIn&Auth */,
 				002F83CE28B3FAF100B7E91D /* Protocols */,
 				005EC07428AD696C007FCA42 /* Extension */,
+				007DDD5628B66EBB00A02CAC /* Helpers */,
 				005EC05E28A0599F007FCA42 /* Assets.xcassets */,
 				005EC06028A0599F007FCA42 /* LaunchScreen.storyboard */,
 				005EC05528A0599E007FCA42 /* AppDelegate.swift */,
@@ -246,9 +249,18 @@
 			children = (
 				007DDD4E28B65B2300A02CAC /* AuthService.swift */,
 				002F83D828B4F4FC00B7E91D /* Models */,
-				007DDD5228B6670F00A02CAC /* Validators.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		007DDD5628B66EBB00A02CAC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				007DDD5428B6690C00A02CAC /* AuthError.swift */,
+				007DDD5228B6670F00A02CAC /* Validators.swift */,
+			);
+			name = Helpers;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		BE29ACD6BDA2DB7ACDC9FA21 /* Frameworks */ = {
@@ -392,6 +404,7 @@
 				002F83D028B4009C00B7E91D /* SectionHeader.swift in Sources */,
 				002F83C928B3EE7B00B7E91D /* GradientView.swift in Sources */,
 				0013191928AD7AB50014E8EE /* SignUpViewController.swift in Sources */,
+				007DDD5528B6690C00A02CAC /* AuthError.swift in Sources */,
 				005EC07228AD5BBC007FCA42 /* UIImageView + Extansion.swift in Sources */,
 				002F83D528B4F49800B7E91D /* MUser.swift in Sources */,
 				007DDD5328B6670F00A02CAC /* Validators.swift in Sources */,

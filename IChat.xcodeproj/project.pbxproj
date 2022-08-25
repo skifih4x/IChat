@@ -35,6 +35,8 @@
 		0033610A28B3C6FF006DFA44 /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 0033610928B3C6FF006DFA44 /* waitingChats.json */; };
 		0033610C28B3C725006DFA44 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0033610B28B3C725006DFA44 /* Bundle-Decodable.swift */; };
 		0033610F28B3DAAA006DFA44 /* ActiveChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0033610E28B3DAAA006DFA44 /* ActiveChatCell.swift */; };
+		0051E3FA28B7A0690098C8C5 /* AuthNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0051E3F928B7A0690098C8C5 /* AuthNavigationDelegate.swift */; };
+		0051E3FC28B7A6950098C8C5 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0051E3FB28B7A6950098C8C5 /* FirestoreService.swift */; };
 		005EC05628A0599E007FCA42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005EC05528A0599E007FCA42 /* AppDelegate.swift */; };
 		005EC05828A0599E007FCA42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005EC05728A0599E007FCA42 /* SceneDelegate.swift */; };
 		005EC05A28A0599E007FCA42 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005EC05928A0599E007FCA42 /* AuthViewController.swift */; };
@@ -81,6 +83,8 @@
 		0033610928B3C6FF006DFA44 /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
 		0033610B28B3C725006DFA44 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		0033610E28B3DAAA006DFA44 /* ActiveChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatCell.swift; sourceTree = "<group>"; };
+		0051E3F928B7A0690098C8C5 /* AuthNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigationDelegate.swift; sourceTree = "<group>"; };
+		0051E3FB28B7A6950098C8C5 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		005EC05228A0599E007FCA42 /* IChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		005EC05528A0599E007FCA42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		005EC05728A0599E007FCA42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				002F83CC28B3FACD00B7E91D /* SelfConfiguringCell.swift */,
+				0051E3F928B7A0690098C8C5 /* AuthNavigationDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -249,6 +254,7 @@
 			children = (
 				007DDD4E28B65B2300A02CAC /* AuthService.swift */,
 				002F83D828B4F4FC00B7E91D /* Models */,
+				0051E3FB28B7A6950098C8C5 /* FirestoreService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -410,8 +416,10 @@
 				007DDD5328B6670F00A02CAC /* Validators.swift in Sources */,
 				0033610F28B3DAAA006DFA44 /* ActiveChatCell.swift in Sources */,
 				0033610428AECA6B006DFA44 /* PeopleViewController.swift in Sources */,
+				0051E3FA28B7A0690098C8C5 /* AuthNavigationDelegate.swift in Sources */,
 				002F83E228B537FB00B7E91D /* InsertableTextField.swift in Sources */,
 				005EC05A28A0599E007FCA42 /* AuthViewController.swift in Sources */,
+				0051E3FC28B7A6950098C8C5 /* FirestoreService.swift in Sources */,
 				0029B79A28AE486700CE0638 /* SetupProfileViewController.swift in Sources */,
 				002F83E028B5356700B7E91D /* ProfileViewController.swift in Sources */,
 				0033610C28B3C725006DFA44 /* Bundle-Decodable.swift in Sources */,
